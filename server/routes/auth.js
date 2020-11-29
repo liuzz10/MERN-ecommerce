@@ -1,3 +1,5 @@
+// When client .post /api/create-or-update-user
+
 const express = require("express");
 
 const router = express.Router();
@@ -10,7 +12,7 @@ const { authCheck } = require("../middlewares/auth");
 // import: by desctructing
 const { createOrUpdateUser } = require("../controllers/auth");
 
-// controller (if authCheck works,
+// controller (if authCheck works, works on createOrUpdateUser)
 router.post("/create-or-update-user", authCheck, createOrUpdateUser);
 
 module.exports = router;
