@@ -25,3 +25,10 @@ exports.createOrUpdateUser = async (req, res) => {
     res.json(newUser);
   }
 };
+
+exports.currentUser = async (req, res) => {
+  (await User.findOne({ email: req.user.email })).execPopulate((err, user) => {
+    if (err) throw new Error(err);
+    res.json(user);
+  });
+};
