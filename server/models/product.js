@@ -32,20 +32,20 @@ const productSchema = new mongoose.Schema(
       type: ObjectId,
       ref: "Category",
     },
-    subs: [
-      {
-        type: ObjectId,
-        ref: "Sub",
-      },
-    ],
+    // subs: [
+    //   {
+    //     type: ObjectId,
+    //     ref: "Sub",
+    //   },
+    // ],
     quantity: Number,
     sold: {
       type: Number,
       default: 0,
     },
-    images: {
-      type: Array,
-    },
+    // images: {
+    //   type: Array,
+    // },
     shipping: {
       type: String,
       enum: ["Yes", "No"], // it has to be one of thes
