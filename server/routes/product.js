@@ -4,7 +4,7 @@ const router = express.Router();
 // middlewares
 const { authCheck, adminCheck } = require("../middlewares/auth");
 
-/ controller
+// controller
 const { create } = require("../controllers/product");
 
 // routes
